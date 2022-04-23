@@ -30,17 +30,17 @@ elif weight > 10:
 
 print("Your total for drone shipping is $" + str(cost_drone))
 
-if cost_ground < cost_drone:
-  print("Ground shipping is most affortable.")
-elif cost_ground < cost_ground_premium:
-  print("Ground shipping is most affortable.")
+if cost_ground < cost_drone and cost_ground < cost_ground_premium:
+  print("Ground shipping is most affortable.")  
   
-if cost_ground_premium < cost_ground and cost_drone:
+if cost_ground_premium < cost_ground and cost_ground_premium < cost_drone:
   print("Ground Premium is most affortable.")
   print("Become a premium member today!")
 
-if cost_drone < cost_ground and cost_ground_premium:
+if cost_drone < cost_ground and cost_drone > cost_ground_premium:
   print("Drone shipping is most affortable.")
   print("Try our newest shipping today!")
 
 #print(21.5 < 4.5)
+
+#So far working for everything but weight between 1 and 10!
