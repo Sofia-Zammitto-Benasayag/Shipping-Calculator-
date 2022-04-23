@@ -1,7 +1,8 @@
 #Shipping Calculator 
-
+print("Welcome to Sally's Shippers.")
+print("Find the most afforable rate to ship.")
 #Variables 
-weight = float(input("Insert weight: "))
+weight = float(input("Insert package weight: "))
 cost_ground_premium = 125.00
 
 #Ground shipping
@@ -28,3 +29,18 @@ elif weight > 10:
   cost_drone = weight * 14.25 + 0    
 
 print("Your total for drone shipping is $" + str(cost_drone))
+
+if cost_ground < cost_drone:
+  print("Ground shipping is most affortable.")
+elif cost_ground < cost_ground_premium:
+  print("Ground shipping is most affortable.")
+  
+if cost_ground_premium < cost_ground and cost_drone:
+  print("Ground Premium is most affortable.")
+  print("Become a premium member today!")
+
+if cost_drone < cost_ground and cost_ground_premium:
+  print("Drone shipping is most affortable.")
+  print("Try our newest shipping today!")
+
+#print(21.5 < 4.5)
